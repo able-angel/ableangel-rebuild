@@ -620,6 +620,18 @@ ul, ol { list-style: none; }
   font-size: 1.05rem;
 }
 
+/* --- Video Container --- */
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+
 /* --- Declaration of Interdependence --- */
 .declaration-body {
   max-width: 860px;
