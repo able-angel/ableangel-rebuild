@@ -329,7 +329,7 @@ ul, ol { list-style: none; }
 }
 
 .page-banner .hero-bg {
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .page-banner h1 {
@@ -431,23 +431,28 @@ ul, ol { list-style: none; }
   text-align: center;
 }
 
-.board-photo {
-  max-width: 600px;
-  margin: 0 auto 40px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
-}
-
 .board-members {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 48px;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
 .board-member {
   text-align: center;
+  max-width: 200px;
+}
+
+.board-member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  border: 3px solid var(--color-white);
+  outline: 2px solid var(--color-border);
 }
 
 .board-member h4 {
@@ -774,7 +779,12 @@ ul, ol { list-style: none; }
 
   .footer-content { grid-template-columns: 1fr; gap: 32px; }
 
-  .board-members { gap: 24px; }
+  .board-members { gap: 32px; }
+
+  .board-member-photo {
+    width: 120px;
+    height: 120px;
+  }
 
   .values-grid { grid-template-columns: 1fr; }
 
