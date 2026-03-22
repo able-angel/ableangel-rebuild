@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Able Angel</title>
+  <meta name="description" content="Explore trusted ABLE Act resources from NAST, FINRA, IRS, Social Security Administration, and more.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a5276'/><text x='16' y='22' font-size='18' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="Able Angel logo">
+        <span>Able Angel</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="hero-bg" style="background-image: url('images/resources-header.jpg');" role="img" aria-label="Resources for the ABLE Act"></div>
+    <h1>Resources</h1>
+  </section>
+
+  <!-- Resource Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Trusted Sources</span>
+        <h2>ABLE Act Resources</h2>
+        <p>Explore these trusted resources to learn more about ABLE accounts, eligibility, tax rules, and state-specific programs.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card fade-in">
+          <h3>ABLE Today (NAST)</h3>
+          <p>The National Association of State Treasurers — foremost authority for responsible state treasury programs. The ABLE Act is administered by each state.</p>
+          <a href="https://www.abletoday.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Website →</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>FINRA</h3>
+          <p>Ensures integrity of America's financial system. ABLE account investment information.</p>
+          <a href="https://www.finra.org/investors/investing/investment-accounts/able-accounts" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Website →</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>IRS</h3>
+          <p>Detailed info on ABLE accounts including tax rules, contributions, withdrawals, and FAQs.</p>
+          <a href="https://www.irs.gov/government-entities/federal-state-local-governments/able-accounts-tax-benefit-for-people-with-disabilities" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Website →</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Social Security Administration</h3>
+          <p>How ABLE accounts impact federal benefits including SSI and Medicaid.</p>
+          <a href="https://www.ssa.gov/ssi/spotlights/spot-able.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Website →</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>ABLE National Resource Center</h3>
+          <p>Comprehensive info about ABLE accounts — eligibility, state-specific programs, FAQs.</p>
+          <a href="https://www.ablenrc.org/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Visit Website →</a>
+        </div>
+
+        <div class="card fade-in">
+          <h3>Disability.gov</h3>
+          <p>Resources for individuals with disabilities including ABLE Act info. Links to a video.</p>
+          <a href="https://storage.googleapis.com/econsys-public-webinars/ABLE%20Accounts-%20A%20Down%20Payment%20on%20Financial%20Freedom-p2brfuifehtj.mp4" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Watch Video →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <img src="images/logo.jpg" alt="Able Angel logo">
+            <span>Able Angel</span>
+          </div>
+          <p>Providing advocacy, education, and resources for people with disabilities.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resources.html">Resources</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="footer-links">
+            <a href="contact.html">Get In Touch</a>
+            <a href="resources.html">ABLE Act Resources</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Able Angel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

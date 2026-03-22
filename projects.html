@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Able Angel</title>
+  <meta name="description" content="Learn about Able Angel's ABLE Act project and how ABLE accounts help people with disabilities build financial futures.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a5276'/><text x='16' y='22' font-size='18' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="Able Angel logo">
+        <span>Able Angel</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="hero-bg" style="background-image: url('images/opportunity-photo.jpg');" role="img" aria-label="Hands coming together representing opportunity"></div>
+    <h1>Projects</h1>
+  </section>
+
+  <!-- ABLE Act Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col fade-in">
+        <div class="two-col-text">
+          <span class="section-label">Current Project</span>
+          <h2>The ABLE Act</h2>
+          <p>Our current project is dedicated to providing valuable resources for the ABLE Act, an important legislation that has the potential to change the lives of millions of individuals and families with disabilities across the United States.</p>
+          <p>Through our efforts, we aim to educate people about the Act's provisions and benefits, and to offer assistance for those who seek to take advantage of it.</p>
+          <p>By providing access to the right information and support, we hope to help more people utilize the ABLE Act to build better financial futures.</p>
+        </div>
+        <div class="two-col-image">
+          <img src="images/opportunity-photo.jpg" alt="Hands coming together representing opportunity and collaboration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Able Account Basics -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Key Information</span>
+        <h2>Able Account Basics</h2>
+      </div>
+
+      <div class="info-block fade-in">
+        <h3>What Are ABLE Accounts?</h3>
+        <p>ABLE accounts allow people with disabilities (occurring prior to their 46th birthday in 2026) to save money that is not counted towards asset limitations set by means-tested benefit programs such as Medicaid or SSI.</p>
+      </div>
+
+      <div class="info-block fade-in">
+        <h3>Contribution Limits</h3>
+        <p>Anyone can contribute to an ABLE account – including the account owner, friends, family, organizations, nonprofits, and employers – up to $19,000 per year as of 2025. ($20,000 in 2026).</p>
+        <p>If the account owner is working and not already contributing to a workplace retirement plan, they can contribute an additional amount equal to their current year's gross income - for 2025 the amount is up to a maximum of $34,060 for the 48 contiguous States and District of Columbia; $36,310 for Hawaii; and $37,810 for Alaska.</p>
+      </div>
+
+      <div class="info-block fade-in">
+        <h3>Lifetime Balance Limits</h3>
+        <p>There are lifetime balance limits for the various state ABLE Programs, which range from around $300k to over $500k.</p>
+      </div>
+
+      <div class="info-block fade-in">
+        <h3>U.S. Territories</h3>
+        <p>U.S. territories, Puerto Rico, Guam, U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands are considered part of the United States for federal purposes, including eligibility for ABLE accounts.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;" class="fade-in">
+        <a href="resources.html" class="btn btn-primary">Explore ABLE Act Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-brand">
+            <img src="images/logo.jpg" alt="Able Angel logo">
+            <span>Able Angel</span>
+          </div>
+          <p>Providing advocacy, education, and resources for people with disabilities.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resources.html">Resources</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="footer-links">
+            <a href="contact.html">Get In Touch</a>
+            <a href="resources.html">ABLE Act Resources</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Able Angel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
