@@ -251,6 +251,78 @@ ul, ol { list-style: none; }
   font-weight: 600;
 }
 
+/* Highlighted nav item (Able250) */
+.nav-links a.nav-highlight {
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 8px 20px;
+}
+
+.nav-links a.nav-highlight:hover {
+  background: var(--color-accent-light);
+  color: var(--color-white);
+}
+
+.nav-links a.nav-highlight.active {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Homepage announcement banner */
+.announcement-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  padding: 16px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.announcement-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(255,255,255,0.03) 20px,
+    rgba(255,255,255,0.03) 40px
+  );
+}
+
+.announcement-banner a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+.announcement-banner a:hover {
+  opacity: 0.9;
+  color: var(--color-white);
+}
+
+.announcement-banner .badge-star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -501,7 +573,7 @@ ul, ol { list-style: none; }
 }
 
 .sponsor-card img {
-  max-height: 80px;
+  max-height: 140px;
   width: auto;
   margin: 0 auto 20px;
   object-fit: contain;
