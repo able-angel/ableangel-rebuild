@@ -573,8 +573,10 @@ ul, ol { list-style: none; }
 }
 
 .sponsor-card img {
-  max-height: 140px;
+  max-width: 220px;
+  max-height: 220px;
   width: auto;
+  height: auto;
   margin: 0 auto 20px;
   object-fit: contain;
 }
