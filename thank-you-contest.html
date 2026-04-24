@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Able Angel | Opportunity Brings Ability to Life</title>
-  <meta name="description" content="Able Angel provides advocacy, education, and resources for ABLE Act savings accounts for people with disabilities.">
+  <title>Essay Received | Able Angel</title>
+  <meta name="description" content="Thank you for your Able250 essay contest submission.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a5276'/><text x='16' y='22' font-size='18' font-weight='bold' text-anchor='middle' fill='white'>A</text></svg>">
 </head>
@@ -20,7 +20,7 @@
         <span></span><span></span><span></span>
       </button>
       <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">The ABLE Act</a>
         <a href="able250.html" class="nav-highlight">Able250</a>
@@ -31,40 +31,16 @@
     </div>
   </nav>
 
-  <!-- Announcement Banner -->
-  <div class="announcement-banner">
-    <a href="able250.html">
-      <span class="badge-star">New</span>
-      Celebrate with Us — Able250: Essay Contest Now Open &amp; Declaration of Interdependence, July 4, 2026
-      <span>&rarr;</span>
-    </a>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-bg" style="background-image: url('images/hero-home.png'); background-position: center 70%;" role="img" aria-label="Friends socializing together in an inclusive setting"></div>
-    <div class="hero-content">
-      <h1>Opportunity Brings Ability to Life</h1>
-      <p>A strategic opportunity for and with people with disabilities and those who support them.</p>
-      <a href="projects.html" class="btn btn-accent">Learn About the ABLE Act</a>
-    </div>
-  </section>
-
-  <!-- Our Current Project -->
+  <!-- Thank You Message -->
   <section class="section">
     <div class="container">
-      <div class="two-col fade-in">
-        <div class="two-col-text">
-          <span class="section-label">Creating Opportunity</span>
-          <h2>The ABLE Act: Opportunity for Financial Independence</h2>
-          <p>The ABLE Act creates a powerful opportunity for people with disabilities to save and invest without jeopardizing their essential benefits. Through education and awareness, Able Angel helps individuals, families, and organizations understand and take advantage of this opportunity.</p>
-          <p>With the 2026 expansion, the opportunity extends to millions more Americans — veterans, people with adult-onset conditions, and families nationwide. Opportunity brings ability to life.</p>
-          <br>
-          <a href="projects.html" class="btn btn-primary">Learn About the ABLE Act</a>
-        </div>
-        <div class="two-col-image">
-          <img src="images/opportunity-photo.jpg" alt="Hands coming together representing opportunity and collaboration">
-        </div>
+      <div class="section-header">
+        <span class="section-label">Essay Received</span>
+        <h2>Thank You for Your Submission!</h2>
+        <p>Your essay has been received and is now in line for judging. Winners will be notified after the July 4, 2026 deadline.</p>
+        <p style="margin-top: 12px;">We appreciate your voice in this historic celebration of America's 250th anniversary.</p>
+        <br>
+        <a href="able250.html" class="btn btn-primary">Back to Able250</a>
       </div>
     </div>
   </section>
@@ -106,24 +82,12 @@
   </footer>
 
   <script>
-    // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('.nav-links');
     toggle.addEventListener('click', () => {
       const open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open);
     });
-
-    // Scroll fade-in
-    const els = document.querySelectorAll('.fade-in');
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-      }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
-      els.forEach(el => observer.observe(el));
-    }
-    // Fallback: reveal all after 1s if observer didn't fire
-    setTimeout(() => els.forEach(el => el.classList.add('visible')), 1000);
   </script>
 
 </body>
