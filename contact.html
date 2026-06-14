@@ -15,7 +15,6 @@
     <div class="container">
       <a href="index.html" class="nav-logo">
         <img src="images/logo.jpg" alt="Able Angel logo">
-        <span>Able Angel</span>
       </a>
       <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -23,7 +22,8 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html">The ABLE Act</a>
+        <a href="able250.html" class="nav-highlight">Able250</a>
         <a href="resources.html">Resources</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html" class="active">Contact</a>
@@ -37,10 +37,16 @@
       <div class="section-header fade-in">
         <span class="section-label">Get In Touch</span>
         <h2>Let's Work Together</h2>
-        <p>Have questions about the ABLE Act or want to partner with us? We'd love to hear from you.</p>
+        <p>Have questions about the ABLE Act or want to partner with us? We'd love to hear from you. We are looking for partners to help advance opportunity for people with disabilities — organizations, agencies, and individuals who share our mission.</p>
+        <p style="margin-top: 8px; font-size: 1rem;">If you would like to support our work or explore partnership opportunities, please reach out below.</p>
       </div>
 
-      <form class="contact-form fade-in" action="#" method="post" novalidate>
+      <form class="contact-form fade-in" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <!-- Honeypot field to prevent spam (hidden from users) -->
+        <p class="hidden" style="display:none;">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -69,7 +75,6 @@
         <div>
           <div class="footer-brand">
             <img src="images/logo.jpg" alt="Able Angel logo">
-            <span>Able Angel</span>
           </div>
           <p>Providing advocacy, education, and resources for people with disabilities.</p>
         </div>
@@ -78,7 +83,8 @@
           <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.html">The ABLE Act</a>
+            <a href="able250.html">Able250</a>
             <a href="resources.html">Resources</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
