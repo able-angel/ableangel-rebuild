@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+
+[forms]
+  enabled = true
+
+# The Able250 essay contest has ended; send old contest links to the Able250 page.
+[[redirects]]
+  from = "/able250-contest.html"
+  to = "/able250.html"
+  status = 301
+
+[[redirects]]
+  from = "/thank-you-contest.html"
+  to = "/able250.html"
+  status = 301
