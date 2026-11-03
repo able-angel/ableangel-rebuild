@@ -8,9 +8,10 @@ The **Able Angel** nonprofit website — a static HTML/CSS site (no build system
 
 ## Critical facts — read these first
 
+- **Code repository: `github.com/able-angel/ableangel-rebuild`** — owned by the **Able Angel GitHub organization** (the nonprofit's own org), not a personal account. The local `origin` remote points here.
 - **Live branch: `claude/stoic-chebyshev`** — deploy from here, not `main`. `origin/main` is frozen at an ancient pre-Wix-migration state (only 2 commits) and should be ignored.
-- **Hosting: Netlify.** Site ID: `348e09b2-be20-4d66-bae8-11efbdce8d68`. Project name in Netlify: `ableangel-preview`. Custom domain: `ableangel.org`.
-- **GitHub account for push: `evalprof`** (NOT `pyork-project-evident`). The work account `pyork-project-evident` is active by default on this machine but does NOT have push access to the repo. If a push is rejected with HTTP 403, run `gh auth switch -u evalprof` and retry.
+- **Hosting: Netlify.** Site ID: `348e09b2-be20-4d66-bae8-11efbdce8d68`. Project name in Netlify: `ableangel-preview`. Custom domain: `ableangel.org`. Netlify deploys automatically from the `claude/stoic-chebyshev` branch of the org repo.
+- **GitHub account for push: `evalprof`** (NOT `pyork-project-evident`). `evalprof` is an **owner** of the `able-angel` org and has push access. The work account `pyork-project-evident` is active by default on this machine but does NOT have push access. If a push is rejected with HTTP 403, run `gh auth switch -u evalprof` and retry.
 - **Email notifications for forms:** site-wide Netlify hooks already deliver every form submission to `kberger@able529.org` and `bnolan@able529.org`. New forms added to the site are automatically covered — no per-form notification setup required.
 
 ## Standard workflow for making a change
@@ -61,12 +62,10 @@ The **Able Angel** nonprofit website — a static HTML/CSS site (no build system
 
 ## Existing pages and their roles
 
-- `index.html` — home page with hero and top announcement banner
+- `index.html` — home page with hero (the top announcement banner was removed Nov 2026; `.announcement-banner` styles remain in `styles.css` for reuse)
 - `about.html` — mission, vision, values, board, sponsors
 - `projects.html` — "The ABLE Act" (the main project — note nav calls it "The ABLE Act" but the filename is still `projects.html`)
 - `able250.html` — the 250th anniversary campaign page
-- `able250-contest.html` — the essay contest page (with Netlify submission form)
-- `thank-you-contest.html` — post-submission confirmation for the essay contest
 - `declaration-review.html` — preview + feedback form for the Declaration of Interdependence
 - `thank-you.html` / `thank-you-declaration.html` — generic and declaration-specific form confirmations
 - `resources.html` — curated external ABLE Act resources
@@ -84,3 +83,7 @@ The **Able Angel** nonprofit website — a static HTML/CSS site (no build system
 
 - **Email hosting migration:** Currently hosted at GoDaddy (~$400/yr for 4 mailboxes). Peter plans to recommend migrating to Google Workspace for Nonprofits (free for eligible 501(c)(3)s). Not a code change; track separately.
 - **`contest@ableangel.org` email address:** Ken planned to set this up at GoDaddy as a forwarder to him and Bill. The site doesn't actually depend on this — submissions flow through Netlify Forms — but the address may still be wanted for external marketing materials.
+
+## Past campaigns
+
+- **Able250 essay contest:** ended; removed from the site in Nov 2026. `able250-contest.html` and `thank-you-contest.html` were deleted and 301-redirect to `able250.html` (see `netlify.toml`). Past submissions remain in the Netlify Forms dashboard (form `essay-contest`).
